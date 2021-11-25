@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -357,6 +358,35 @@ footer {
   letter-spacing: 0.1rem;
 }
 
+/* GARANTÍA */
+.tittles-garantía {
+  color: #ed1b2e;
+  text-align: center;
+  font-size: 36px;
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px;
+  margin-bottom: 5px;
+}
+
+.texto-garantía {
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: start;
+}
+
+.span-garantía {
+  color: #ed1b2e;
+  font-weight: bold;
+}
+
+.lista-garantía {
+  font-weight: bold;
+  text-align: start;
+  font-size: 14px;
+}
+
 li {
   text-decoration: none;
 }
@@ -382,7 +412,7 @@ section {
   font-weight: lighter;
   font-family: 'Montserrat', sans-serif;
   margin: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .text {

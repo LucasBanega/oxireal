@@ -109,6 +109,37 @@ ul {
   list-style: none;
 }
 
+/* BREADCRUMBS */
+.breadcrumbs {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+}
+
+.breadcrumbs__item:not(:last-of-type)::after {
+  content: '/';
+  margin: 0 5px;
+  color: #ed1b2e;
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: #181818;
+}
+
+.breadcrumbs__link:hover {
+  text-decoration: underline;
+  color: #ed1b2e;
+}
+
+.breadcrumbs__link--active {
+  color: #ed1b2e;
+  font-weight: bold;
+}
+
 /* FOOTER */
 footer {
   background-color: #181818;

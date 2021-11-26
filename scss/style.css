@@ -389,6 +389,11 @@ footer {
   letter-spacing: 0.1rem;
 }
 
+.product-list {
+  color: #ed1b2e;
+  font-weight: bold;
+}
+
 /* GARANTÍA */
 .tittles-garantía {
   color: #ed1b2e;

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* VARIABLES */
 * {
   margin: 0px;
   padding: 0px;
@@ -9,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
 
@@ -292,16 +293,9 @@ footer {
   color: white;
 }
 
-.contact-info p span {
+.contact-info span {
   color: #ed1b2e;
   font-weight: bold;
-}
-
-.contact-info h4,
-.contact-info ul,
-.contact-info p {
-  text-align: center;
-  margin: 0 0 1rem 0;
 }
 
 .contact-info ul {
@@ -309,8 +303,15 @@ footer {
   padding: 0;
 }
 
-.contact-info ul li {
+.contact-info li {
   padding: .3em;
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
 }
 
 /* Productos */
@@ -400,7 +401,7 @@ footer {
   text-align: center;
   font-size: 36px;
   font-weight: lighter;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 10px;
   margin-bottom: 5px;
 }
@@ -437,16 +438,16 @@ li {
 
 h5 {
   text-align: right;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
   color: #181818;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 section {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .tittles {
@@ -454,7 +455,7 @@ section {
   text-align: center;
   font-size: 36px;
   font-weight: lighter;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 10px;
   margin-bottom: 20px;
 }
@@ -527,7 +528,7 @@ p {
   grid-column: span 10 / auto;
   font-weight: bold;
   color: #ed1b2e;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
 }
 

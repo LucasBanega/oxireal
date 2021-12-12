@@ -1,3 +1,10 @@
+/* VARIABLES */
+
+$color-red: #ed1b2e;
+$color-black: #181818;
+$font: 'Montserrat', sans-serif;
+
+
 *   {
     margin: 0px;
     padding: 0px;
@@ -8,13 +15,13 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font;
     line-height: 1.5;
 }
 
 header {
     background-color: white;
-    border-top: 20px solid #181818;
+    border-top: 20px solid $color-black;
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -40,15 +47,15 @@ img {
 }
 
 .navbar {
-    border-top: #181818 20px solid;
+    border-top: $color-black 20px solid;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #181818;
+    color: $color-black;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #ed1b2e;
+    color: $color-red;
 }
 
 .nav-link {
@@ -58,7 +65,7 @@ img {
 }
 
 .navbar-nav:hover {
-    color: #ed1b2e;
+    color: $color-red;
 }
 
 .menu-contenedor{
@@ -71,14 +78,14 @@ img {
 }
 
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
-    color: #ed1b2e;
-    border-bottom: 2px solid #ed1b2e;
+    color: $color-red;
+    border-bottom: 2px solid $color-red;
     border-radius: 1px;
     transition: 0.5s ease;
 }
 
 .navbar-nav:hover{
-    color: #ed1b2e;
+    color: $color-red;
 }
 
 .container {
@@ -109,58 +116,59 @@ ul {
 .breadcrumbs__item:not(:last-of-type)::after {
     content: '/';
     margin: 0 5px;
-    color: #ed1b2e;
+    color: $color-red;
 }
 
 .breadcrumbs__link {
     text-decoration: none;
-    color: #181818;
+    color: $color-black;
 }
 
 .breadcrumbs__link:hover {
     text-decoration: underline;
-    color: #ed1b2e;
+    color: $color-red;
 }
 
 .breadcrumbs__link--active {
-    color: #ed1b2e;
+    color: $color-red;
     font-weight: bold;
 }
 
 /* FOOTER */
 
 footer {
-    background-color:#181818;
+    background-color:$color-black;
     box-sizing: border-box;
     padding: 70px 0;
-    border-bottom: #ed1b2e 20px solid;
+    border-bottom: $color-red 20px solid;
     margin-top: 40px;
 }
+
 
 .footer-col {
     width: 25%;
     padding: 0 15px;
-}
 
-.footer-col h4{
-    font-size: 18px;
-    color: white;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 500;
-    position: relative;
-}
+    h4 {
+        font-size: 18px;
+        color: white;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
 
-.footer-col h4::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #ed1b2e;
-    height: 2px;
-    box-sizing: border-box; 
-    width: 50px;
-}
+    h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: $color-red;
+        height: 2px;
+        box-sizing: border-box; 
+        width: 50px;
+    }
+}    
 
 .footer-col ul li:not(:last-child){
     margin-bottom: 10px;
@@ -204,7 +212,7 @@ footer {
 //* Contacto*//
 
 .content {
-    color: #181818;
+    color: $color-black;
     padding: 0 1.5em;
     max-width: 1170px;
     margin-left: auto;
@@ -216,7 +224,7 @@ footer {
     text-align: center;
     font-size: 36px;
     font-weight: lighter;
-    color: #ed1b2e;
+    color: $color-red;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
 
@@ -249,11 +257,11 @@ footer {
     border: none;
     background: none;
     outline: none;
-    border-bottom: 1px solid #ed1b2e;
+    border-bottom: 1px solid $color-red;
 }
 
 .contact-form form button {
-    background: #ed1b2e;
+    background: $color-red;
     border: 0;
     color: white;
     font-weight: bold;
@@ -269,17 +277,26 @@ footer {
 
 
 .contact-info {
-    background: #181818;
+    background: $color-black;
     color: white;
-}
 
-.contact-info p {
-    color: white;
-}
+    p {
+        color: white;
+    }
 
-.contact-info p span {
-    color: #ed1b2e;
-    font-weight: bold;
+    span {
+        color: $color-red;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    li {
+        padding: .3em;
+    }
 }
 
 .contact-info h4,
@@ -287,15 +304,6 @@ footer {
 .contact-info p {
     text-align: center;
     margin: 0 0 1rem 0;
-}
-
-.contact-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-info ul li {
-    padding: .3em;
 }
 
 /* Productos */
@@ -351,7 +359,7 @@ footer {
 .container .card a{
     font-weight: 500;
     text-decoration: none;
-    color: #ed1b2e;
+    color: $color-red;
 }
 
 .card-btn {
@@ -361,7 +369,7 @@ footer {
     font-size: 2rem;
     text-align: center;
     color: white;
-    background-color: #ed1b2e;
+    background-color: $color-red;
     border: none;
     border-radius: 0.4rem;
     cursor: pointer;
@@ -369,18 +377,18 @@ footer {
 }
 
 .product-list {
-    color: #ed1b2e;
+    color: $color-red;
     font-weight: bold;
 }
 
 /* GARANTÍA */
 
 .tittles-garantía {
-    color: #ed1b2e;
+    color: $color-red;
     text-align: center;
     font-size: 36px;
     font-weight: lighter;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font;
     margin: 10px;
     margin-bottom: 5px;
 }
@@ -393,7 +401,7 @@ footer {
 }
 
 .span-garantía{
-    color: #ed1b2e;
+    color: $color-red;
     font-weight: bold;
 }
 
@@ -408,7 +416,7 @@ footer {
 
 .texto-compañia {
     text-align: start;
-    color: #ed1b2e;
+    color: $color-red;
     font-weight: bold;
     font-size: 14px;
 }
@@ -420,24 +428,24 @@ li {
 
 h5 {
     text-align: right;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font;
 }
 
 h1 {
-    color: #181818;
-    font-family: 'Montserrat', sans-serif;
+    color: $color-black;
+    font-family: $font;
 }
 
 section {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font;
 }
 
 .tittles {
-    color: #ed1b2e;
+    color: $color-red;
     text-align: center;
     font-size: 36px;
     font-weight: lighter;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font;
     margin: 10px;
     margin-bottom: 20px;
 }
@@ -448,7 +456,7 @@ section {
 }
 
 .hmenu {
-    color: #ed1b2e;
+    color: $color-red;
     text-align: center;
     font-size: 200%;
     font-weight: normal;
@@ -481,7 +489,7 @@ p {
 
 .products {
     width: 200px;
-    border: 5px solid #181818;
+    border: 5px solid $color-black;
     height: 200px;
     padding: 50px 30px;
     margin: 20px 30px 10px 40px;
@@ -498,8 +506,8 @@ p {
 .span-col-10 {
     grid-column: span 10 / auto;
     font-weight: bold;
-    color: #ed1b2e; 
-    font-family: 'Montserrat', sans-serif;
+    color: $color-red; 
+    font-family: $font;
     font-size: 16px;  
 }
 
@@ -507,7 +515,7 @@ p {
     grid-row: span 20 / auto;
     text-align: center;
     font-weight: bold;
-    color: #181818;
+    color: $color-black;
     margin: 20px;
 }
 

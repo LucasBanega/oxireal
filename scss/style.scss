@@ -396,8 +396,9 @@ footer {
 .texto-garantía {
     color: black;
     font-weight: bold;
-    font-size: 14px;
-    text-align: start;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .span-garantía{
@@ -407,18 +408,23 @@ footer {
 
 .lista-garantía {
     font-weight: bold;
-    text-align: start;
-    font-size: 14px;
+    text-align: center;
+    font-size: 16px;
 }
 
 
 /* QUIÉNES SOMOS */
 
 .texto-compañia {
-    text-align: start;
+    text-align: center;
     color: $color-red;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.título-h3 {
+    margin-top: 40px;
 }
 
 

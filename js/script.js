@@ -1,4 +1,4 @@
-function saludar() {
+/* function saludar() {
 
     console.log("Hola!");
 }
@@ -39,7 +39,7 @@ while (cookies == "no") {
     cookies = prompt("¿Acepta Cookies?")
 }
 
-/*/const personaje = {
+const personaje = {
     nombre: "Leonard",
     edad: 41,
     ci: 173
@@ -58,4 +58,70 @@ function Persona(first, last, age, iq, nicknames) {
         this.ci: iq,
             this.apodos: nicknames;
 } 
-/*/
+
+
+class Cliente {
+
+    constructor(nombre, apellido, edad, tipodesoldadura, escliente) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.tipodesoldadura = tipodesoldadura;
+        this.escliente = escliente
+    }
+
+    soldadura() {
+        if (this.tipodesoldadura == "ATAL") {
+            console.log("Soldas con MIG");
+        } else {
+            console.log("Soldas con TIG");
+        }
+    
+    cliente() {
+        if (this.escliente == "si") {
+            console.log ("Gracias por confiar en Oxi Real");
+        }else{
+            console.log("Bienvenido a Oxi Real")
+        }
+    }    
+
+    }
+
+}
+
+const Cliente1 =new Cliente("Lucas", "Banega", "23", "ATAL", "Si");
+
+Cliente1.soldadura();
+
+Cliente1.tipodesoldadura = prompt("¿Suelda con ATAL o con ARGON?");
+
+*/
+
+class Prospecto {
+
+    constructor(nombre, edad, cliente, tipo) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.cliente = cliente;
+        this.tipo = tipo;
+    }
+
+    soldador() {
+        if (this.tipo == "Atal") {
+            console.log("Soldas con MIG");
+        }else{
+            console.log("Soldas con TIG");
+        }
+    }
+}
+
+const prospecto1 =new Prospecto("Lucas", "23", "Sí", "MIG");
+
+prospecto1.tipo = prompt("¿Suelda con Atal o con Argon?");
+
+prospecto1.soldador();
+
+prospecto1.nombre = prompt("Ingrese su nombre");
+prospecto1.edad = parseInt(prompt("Ingrese su edad"));
+prospecto1.cliente = prompt("¿Es cliente de Oxi Real?");
+

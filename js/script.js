@@ -1,102 +1,3 @@
-/* function saludar() {
-
-    console.log("Hola!");
-}
-
-saludar();
-
-function solicitarNombre() {
-    let nombreIngresado = prompt("Ingrese su nombre");
-    alert("El nombre ingresado es " + nombreIngresado);
-}
-
-for (let index = 0; index < 2; index++) {
-    solicitarNombre();
-}
-
-let nombre = prompt("Ingrese su nombre");
-let apellido = prompt("Ingrese su apellido");
-let cliente = prompt("¿Es usted cliente de Oxi Real?")
-let nombreUsuario = prompt("Ingresar nombre de usuario");
-if (nombreUsuario == "") {
-    alert("No ingresaste el nombre de usuario");
-}
-else {
-    alert("Nombre de usuario ingresado" + " " + nombreUsuario);
-}
-
-
-for (let index = 1; index <= 3; index++) {
-    let ingresarNombre = prompt("Ingrese su Nombre");
-    alert(" Cliente N° " + index + " Nombre: " + ingresarNombre);
-
-}
-
-let cookies = prompt("¿Acepta Cookies?");
-while (cookies == "no") {
-    ;
-    alert(cookies + " " + "Aceptaste cookies");
-    cookies = prompt("¿Acepta Cookies?")
-}
-
-const personaje = {
-    nombre: "Leonard",
-    edad: 41,
-    ci: 173
-}
-
-console.log(personaje.nombre);
-console.log(personaje["edad"]);
-
-
-function Persona(first, last, age, iq, nicknames) {
-    this.nombre = {
-        'first': first,
-        'last': last
-    };
-    this.edad: age,
-        this.ci: iq,
-            this.apodos: nicknames;
-} 
-
-
-class Cliente {
-
-    constructor(nombre, apellido, edad, tipodesoldadura, escliente) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.tipodesoldadura = tipodesoldadura;
-        this.escliente = escliente
-    }
-
-    soldadura() {
-        if (this.tipodesoldadura == "ATAL") {
-            console.log("Soldas con MIG");
-        } else {
-            console.log("Soldas con TIG");
-        }
-    
-    cliente() {
-        if (this.escliente == "si") {
-            console.log ("Gracias por confiar en Oxi Real");
-        }else{
-            console.log("Bienvenido a Oxi Real")
-        }
-    }    
-
-    }
-
-}
-
-const Cliente1 =new Cliente("Lucas", "Banega", "23", "ATAL", "Si");
-
-Cliente1.soldadura();
-
-Cliente1.tipodesoldadura = prompt("¿Suelda con ATAL o con ARGON?");
-
-*/
-
 class Prospecto {
 
     constructor(nombre, edad, cliente, tipo) {
@@ -125,3 +26,33 @@ prospecto1.nombre = prompt("Ingrese su nombre");
 prospecto1.edad = parseInt(prompt("Ingrese su edad"));
 prospecto1.cliente = prompt("¿Es cliente de Oxi Real?");
 
+const productos =[{id: 1, producto: "Máquina" },
+                  {id: 2, producto: "Torchas"},
+                  {id: 3, producto: "Consumibles"},
+                  {id: 4, producto: "Insumos"}];
+                  
+for(const producto of productos) {
+    console.log(producto.id);
+    console.log(producto.producto);
+}
+
+
+localStorage.setItem('usuario', 'Lucas'); 
+localStorage.setItem('Edad', '23');
+
+sessionStorage.setItem('Cuotas', [3,6,9,12]);
+sessionStorage.setItem('esDarkMode', true);
+
+
+let usuario = localStorage.getItem('usuario');
+console.log(usuario);
+
+let cantCuotas = sessionStorage.getItem('Cuotas').split(",");
+let modo = (sessionStorage.getItem('esDarkMode')=='true'); 
+
+
+for (let i = 0; i < sessionStorage.length; i++) {
+    let clave = localStorage.key(i);
+    console.log = ("Clave: "+ clave);
+    console.log = ("Valor: "+ sessionStorage.getItem(clave));
+}

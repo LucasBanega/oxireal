@@ -30,6 +30,7 @@ const productos =[{id: 1, producto: "Máquina" },
                   {id: 2, producto: "Torchas"},
                   {id: 3, producto: "Consumibles"},
                   {id: 4, producto: "Insumos"}];
+      productos.push({id: 5, producto: "Alambre"});              
                   
 for(const producto of productos) {
     console.log(producto.id);

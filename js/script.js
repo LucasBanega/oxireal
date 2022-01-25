@@ -59,3 +59,12 @@ for (let i = 0; i < sessionStorage.length; i++) {
 }
 
 */
+
+document.getElementById("nombre").value = "Lucas"; 
+document.getElementById("edad").value = 23;
+
+let simulador = document.getElementById("simulador");
+console.log(simulador.innerHTML);
+
+let concepto = document.getElementById("concepto");
+console.log(concepto.innerHTML);  

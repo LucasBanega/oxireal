@@ -60,8 +60,9 @@ for (let i = 0; i < sessionStorage.length; i++) {
 
 */
 
-document.getElementById("nombre").value = "Lucas"; 
-document.getElementById("edad").value = 23;
+const HTMLUsuario = document.getElementById("nombreUsuario").value
+const divPadre = document.getElementById("contenedor")
+divPadre.innerHTML = HTMLUsuario
 
 let simulador = document.getElementById("simulador");
 console.log(simulador.innerHTML);

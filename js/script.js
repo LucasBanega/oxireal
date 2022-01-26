@@ -60,9 +60,10 @@ for (let i = 0; i < sessionStorage.length; i++) {
 
 */
 
-const HTMLUsuario = document.getElementById("nombreUsuario").value
-const divPadre = document.getElementById("contenedor")
-divPadre.innerHTML = HTMLUsuario
+const HTMLUsuario = document.getElementById("nombreUsuario");
+const divPadre = document.getElementById("contenedor");
+divPadre.innerHTML = HTMLUsuario;
+console.log(HTMLUsuario);
 
 let simulador = document.getElementById("simulador");
 console.log(simulador.innerHTML);

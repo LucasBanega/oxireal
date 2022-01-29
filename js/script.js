@@ -60,13 +60,35 @@ for (let i = 0; i < sessionStorage.length; i++) {
 
 */
 
-const HTMLUsuario = document.getElementById("nombreUsuario");
-const divPadre = document.getElementById("contenedor");
-divPadre.innerHTML = HTMLUsuario;
-console.log(HTMLUsuario);
+let miFormulario = document.getElementById("formulario");
+miFormulario.addEventListener("submit", validarFormulario);
 
-let simulador = document.getElementById("simulador");
-console.log(simulador.innerHTML);
+function validarFormulario(e) {
+    e.preventDefault();
+    console.log("Formulario Enviado");
+}
 
-let concepto = document.getElementById("concepto");
-console.log(concepto.innerHTML);  
+const imagenes = document.querySelectorAll(".imagenes img");
+const imagenMostrada = document.querySelectorAll(".imagen-mostrada img");
+const consumibles = document.querySelectorAll(".consumibles span");
+const espesores = document.querySelectorAll(".espesores .potencia");
+
+consumibles.forEach(consumibles => {
+    consumibles.addEventListener("click", () => {
+        const id = consumibles.getAttribute("id")
+        imagenMostrada.setAttribute("src", '../images/${id}.jpg')
+    })
+})
+
+const eliminarActive = () => {
+    espesores.forEach(potencia => {
+        potencia.classList.remove("active")
+    })
+}
+
+espesores.forEach(potencia => {
+    potencia.addEventListener("click", () => {
+        eliminarActive();
+        potencia.classList.add("active");
+    })
+})

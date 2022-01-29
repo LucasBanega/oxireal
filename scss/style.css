@@ -550,6 +550,119 @@ p {
   margin: 20px;
 }
 
+/* Simulador */
+.card-sim {
+  width: 390px;
+  height: 500px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 80px 30px;
+  -webkit-box-shadow: 0px 0px 10px #ed1b2e;
+          box-shadow: 0px 0px 10px #ed1b2e;
+  margin-left: 750px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.card-sim .titulo {
+  margin-top: 40px;
+  width: 100%;
+  font-size: 30px;
+  color: #ed1b2e;
+}
+
+.card-sim .consumibles {
+  margin-top: 40px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-sim .consumibles span {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #ed1b2e;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.card-sim .espesor-contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-sim .espesores {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card-sim .espesores .potencia {
+  background-color: #ed1b2e;
+  padding: 10px;
+  border-radius: 1000px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.card-sim .espesores .potencia:hover {
+  background-color: #860611;
+}
+
+.card-sim .espesores .potencia.active {
+  background-color: #860611;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.imagenes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.imagenes img {
+  width: 187px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
 /* responsive */
 @media (max-width: 767px) {
   .footer-col {

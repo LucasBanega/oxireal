@@ -37,6 +37,7 @@ for (const producto of productos) {
     console.log(producto.producto);
 }
 
+*/
 
 localStorage.setItem('usuario', 'Lucas');
 localStorage.setItem('Edad', '23');
@@ -58,7 +59,7 @@ for (let i = 0; i < sessionStorage.length; i++) {
     console.log = ("Valor: " + sessionStorage.getItem(clave));
 }
 
-*/
+
 
 let miFormulario = document.getElementById("formulario");
 miFormulario.addEventListener("submit", validarFormulario);

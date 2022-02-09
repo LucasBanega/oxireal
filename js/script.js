@@ -37,7 +37,7 @@ for (const producto of productos) {
     console.log(producto.producto);
 }
 
-*/
+
 
 localStorage.setItem('usuario', 'Lucas');
 localStorage.setItem('Edad', '23');
@@ -93,3 +93,76 @@ espesores.forEach(potencia => {
         potencia.classList.add("active");
     })
 })
+
+$(document).ready(function(){
+
+    console.log("Ya podemos trabajar con el DOM");
+
+})
+
+
+$(function(){
+    console.log("Ya podemos trabajar con el DOM");
+})
+
+$('.titulo').css('color', 'black');
+*/
+
+
+let $material = document.getElementById('list-material')
+let $calor = document.getElementById('list-calor')
+let $espesor = document.getElementById('list-espesor')
+let $productividad = document.getElementById('list-productividad')
+
+let materiales = ['Metal', 'No metal']
+let calores = ['Zona de calor tolerada', 'Zona de calor no tolerada']
+let espesores = ['Menos de 10 mm (3/8 pulg.)', 'De 10 mm (3/8 pulg.) a 50 mm (2 pulg.)', 'De 50 mm (2 pulg.) a 75 mm (3 pulg.)', 'Más de 75 mm (3 pulg.)']
+let calidad = ['Necesito un corte perfectamente recto y una precisión muy alta, aun si eso significa cortar extremadamente lento', 'Valoro la productividad y la calidad. Estoy dispuesto a aceptar un ángulo de bisel de hasta 3º si puedo maximizar la velocidad de corte', 'Tener un ángulo de bisel de ≥ 3° es perfectamente aceptable si puedo cortar muy rápidamente']
+
+function mostrarOpciones (soldadura, corte) {
+    let elementos = '<option selected disables>--Seleccione--</option>'
+
+    for(let i = 0; i <soldadura.length; i++){
+        elementos += '<option value="' + soldadura[i] + '">' + soldadura[i] + '</option>'
+    }
+
+    corte.innerHTML = elementos
+}
+
+mostrarOpciones(materiales, $material)
+
+
+$material.addEventListener('change', function() {
+    let valor = $material.value
+
+    
+})
+
+listForm.addEventListener('input', () => {
+    if ($material.value == 'Metal') {
+        $calor.removeAttribute('disabled');
+    } else {
+        $calor.setAttribute('disabled', 'disabled');   
+    }
+
+    if ($calor.value == 'Tolerada') {
+        $espesor.removeAttribute('disabled');
+    } else {
+        $espesor.setAttribute('disabled', 'disabled');   
+    }
+
+    if ($espesor.value == 'Menos de 10 mm (3/8 pulg.)') {
+        $productividad.removeAttribute('disabled');
+    } else {
+        $productividad.setAttribute('disabled', 'disabled');   
+    }
+
+
+
+});
+
+
+
+
+
+

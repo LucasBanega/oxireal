@@ -92,59 +92,49 @@
       </ul>
     </div>
 
-    <h1 class="tittles-garantía" id="simulador">Simulador</h1>
+    <h1 class="tittles-garantía">Simulador</h1>
+    <form id="listForm">
+      <h1 class="select-tittle">MATERIAL</h1>
+      <select id="list-material" class="card">
+        <option value="Seleccionar...">Seleccionar...</option>
+        <option value="Metal">Metal</option>
+        <option value="No Metal">No metal</option>
+      </select>
 
-    <form id="formulario">
-      <input type="text">
-      <input type="number">
-      <input type="submit" value="Enviar">
+      <h1 class="select-tittle">TOLERANCIA AL CALOR</h1>
+      <select id="list-calor" disabled="disabled">
+        <option value="Seleccionar...">Seleccionar...</option>
+        <option value="Tolerada">Zona de calor tolerada</option>
+        <option value="No tolerada">Zona de calor no tolerada</option>
+      </select>
+
+      <h1 class="select-tittle">ESPESOR</h1>
+      <select id="list-espesor" disabled="disabled">
+        <option value="Seleccionar...">Seleccionar...</option>
+        <option value="Menos de 10 mm (3/8 pulg.)">Menos de 10 mm (3/8 pulg.)</option>
+        <option value="De 10 mm (3/8 pulg.) a 50 mm (2 pulg.)">De 10 mm (3/8 pulg.) a 50 mm (2 pulg.)</option>
+        <option value="De 50 mm (2 pulg.) a 75 mm (3 pulg.)">De 50 mm (2 pulg.) a 75 mm (3 pulg.)</option>
+        <option value="Más de 75 mm (3 pulg.)">Más de 75 mm (3 pulg.)</option>
+      </select>
+
+      <h1 class="select-tittle">CALIDAD Y PRODUCTIVIDAD</h1>
+      <select id="list-productividad" disabled="disabled">
+        <option value="Seleccionar...">Seleccionar...</option>
+        <option
+          value="Necesito un corte perfectamente recto y una precisión muy alta, aun si eso significa cortar extremadamente lento">
+          Necesito un corte perfectamente recto y una precisión muy alta, aun si eso significa cortar extremadamente
+          lento
+        </option>
+        <option
+          value="Valoro la productividad y la calidad. Estoy dispuesto a aceptar un ángulo de bisel de hasta 3º si puedo maximizar la velocidad de corte">
+          Valoro la productividad y la calidad. Estoy dispuesto a aceptar un ángulo de bisel de hasta 3º si puedo
+          maximizar la velocidad de corte</option>
+        <option value="Tener un ángulo de bisel de ≥ 3° es perfectamente aceptable si puedo cortar muy rápidamente">
+          Tener
+          un ángulo de bisel de ≥ 3° es perfectamente aceptable si puedo cortar muy rápidamente</option>
+      </select>
     </form>
 
-
-    <div class="card-sim" id="card">
-      <div class="imagen-mostrada">
-        <img src="../images/Rollo-alambre.jpg" alt="welding">
-      </div>
-      <div class="titulo">
-        <span>Consumibles</span>
-      </div>
-      <div class="consumibles">
-        <span class="Rollo-alambre" id="Rollo-alambre"></span>
-        <span class="Content-Card-Accessores-ContactTips" id="Content-Card-Accessores-ContactTips"></span>
-        <span class="difusores" id="difusores"></span>
-      </div>
-      <div class="espesor-contenedor">
-        <div class="titulo">
-          <span>Espesor</span>
-        </div>
-        <div class="espesores">
-          <div class="potencia active">
-            <span>0.6</span>
-          </div>
-          <div class="potencia">
-            <span>0.8</span>
-          </div>
-          <div class="potencia">
-            <span>0.9</span>
-          </div>
-          <div class="potencia">
-            <span>1.2</span>
-          </div>
-          <div class="potencia">
-            <span>2.4</span>
-          </div>
-          <div class="potencia">
-            <span>3.2</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="imagenes">
-      <img src="../images/Rollo-alambre.jpg" alt="">
-      <img src="../images/Content-Card-Accessores-ContactTips.jpg" alt="">
-      <img src="../images/difusores.jpg" alt="">
-    </div>
 
 
     <footer class="footer">
@@ -197,7 +187,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/jquery-3.6.0.js"></script>
     <script src="../js/script.js"></script>
 

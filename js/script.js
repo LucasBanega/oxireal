@@ -109,24 +109,95 @@ $('.titulo').css('color', 'black');
 */
 
 
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
 
-const optionsList = document.querySelectorAll(".option");
+let $material = document.getElementById('material')
+let $calor = document.getElementById('calor')
+let $espesor = document.getElementById('espesor')
+let $productividad = document.getElementById('productividad')
 
-selected.addEventListener("click", () => {
-    optionsContainer.classList.toggle("active");
+let materiales = ['Metal', 'No metal']
+let calores = ['Zona de calor tolerada', 'Zona de calor no tolerada']
+let espesores = ['Menos de 10 mm (3/8 pulg.)', 'De 10 mm (3/8 pulg.) a 50 mm (2 pulg.)', 'De 50 mm (2 pulg.) a 75 mm (3 pulg.)', 'Más de 75 mm (3 pulg.)']
+let calidad = ['Necesito un corte perfectamente recto y una precisión muy alta, aun si eso significa cortar extremadamente lento', 'Valoro la productividad y la calidad. Estoy dispuesto a aceptar un ángulo de bisel de hasta 3º si puedo maximizar la velocidad de corte', 'Tener un ángulo de bisel de ≥ 3° es perfectamente aceptable si puedo cortar muy rápidamente']
+
+const box = document.querySelectorAll(".select-box")
+
+const selectElement = document.getElementById('material');
+
+
+$material.addEventListener('change', (event) => {
+    const resultado = document.querySelector('.resultado1');
+    resultado.textContent = `Elegiste ${event.target.value}`;
+
 });
 
-optionsList.forEach( o => {
-    o.addEventListener("click", ()=> {
-        selected.innerHTML = o.querySelector("label").innerHTML;
-        optionsContainer.classList.remove("active");
-    })
+$calor.addEventListener('change', (event) => {
+    const resultado2 = document.querySelector('.resultado2');
+    resultado2.textContent = `Elegiste ${event.target.value}`;
+});
+
+$espesor.addEventListener('change', (event) => {
+    const resultado3 = document.querySelector('.resultado3');
+    resultado3.textContent = `Elegiste ${event.target.value}`;
+});
+
+listForm.addEventListener('input', () => {
+    if ($material.value == 'Metal') {
+        $calor.removeAttribute('disabled');
+    } else {
+        $calor.setAttribute('disabled', 'disabled');   
+    }
+
+    if ($calor.value == 'Tolerada') {
+        $espesor.removeAttribute('disabled');
+    } else {
+        $espesor.setAttribute('disabled', 'disabled');   
+    }
+
+    if ($espesor.value == 'Menos de 10 mm (3/8 pulg.)') {
+        $productividad.removeAttribute('disabled');
+    } else {
+        $productividad.setAttribute('disabled', 'disabled');   
+    }
 })
 
+function ajax() {
+    const http = new XMLHttpRequest();
+    const url = "http://127.0.0.1:5500/pages/saludo.html";
 
+    http.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            console.log(this.responseText);
+            document.getElementById("response").innerHTML = this.responseText;
+        }
+    }
 
+    http.open("GET", url);
+    http.send();
+}
 
+document.getElementById('boton').addEventListener("click", function(){
+    ajax();
+});
+
+function enviar (){
+    var nombre = document.getElementById('fullname').value;
+    var mail = document.getElementById('email').value;
+    var telefono = document.getElementById('phone').value;
+    var empresa = document.getElementById('empresa').value;
+
+    var dataen =  'nombre=' +nombre +'&mail='+mail; 
+
+    $.ajax({
+        type: 'post',
+        url: "http://127.0.0.1:5500/pages/saludo.html",
+        data: dataen, 
+        success: function(resp){
+            $("#respa").html(resp);
+        
+        }
+    })
+    return false; 
+}
 
 

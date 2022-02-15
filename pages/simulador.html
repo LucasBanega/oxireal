@@ -94,127 +94,66 @@
 
     <h1 class="tittles-garantía">Simulador</h1>
 
-    <div class="container-sim">
-      <h2>MATERIAL</h2>
 
-
-
+    <h2>MATERIAL</h2>
+    <form id="listForm">
       <div class="select-box">
-        <div class="options-container">
-
-          <div class="option">
-            <input type="radio" class="radio" id="metal" name="category">
-            <label for="Metal">Metal</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="No Metal" name="category">
-            <label for="No metal">No Metal</label>
-          </div>
-        </div>
-        <div class="selected">
-          Seleccionar
-        </div>
+        <select name="format" id="material">
+          <option selected disabled>Seleccionar</option>
+          <option value="Metal">Metal</option>
+          <option value="No Metal">No Metal</option>
+        </select>
       </div>
-    </div>
 
-    <div class="container-sim">
+
       <h2>TOLERANCIA AL CALOR</h2>
-
       <div class="select-box">
-        <div class="options-container">
-
-          <div class="option">
-            <input type="radio" class="radio" id="Tolerada" name="category">
-            <label for="Tolerada">Zona de calor tolerada</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="No tolerada" name="category">
-            <label for="No tolerada">Zona de calor no tolerada</label>
-          </div>
-        </div>
-        <div class="selected">
-          Seleccionar
-        </div>
+        <select name="format" id="calor" disabled="disabled">
+          <option selected disabled>Seleccionar</option>
+          <option value="Tolerada">Zona de calor tolerada</option>
+          <option value="No Tolerada">Zona de calor no tolerada</option>
+        </select>
       </div>
-    </div>
 
-    <div class="container-sim">
       <h2>ESPESOR</h2>
-
       <div class="select-box">
-        <div class="options-container">
-
-          <div class="option">
-            <input type="radio" class="radio" id="Menos de 10 mm (3/8 pulg.)" name="category">
-            <label for="Menos de 10 mm (3/8 pulg.)">Menos de 10 mm (3/8 pulg.)</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="De 10 mm (3/8 pulg.) a 50 mm (2 pulg.)" name="category">
-            <label for="De 10 mm (3/8 pulg.) a 50 mm (2 pulg.)">De 10 mm (3/8 pulg.) a 50 mm (2 pulg.)</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="De 50 mm (2 pulg.) a 75 mm (3 pulg.)" name="category">
-            <label for="De 50 mm (2 pulg.) a 75 mm (3 pulg.)">De 50 mm (2 pulg.) a 75 mm (3 pulg.)</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="Más de 75 mm (3 pulg.)" name="category">
-            <label for="Más de 75 mm (3 pulg.)">Más de 75 mm (3 pulg.)</label>
-          </div>
-
-        </div>
-        <div class="selected">
-          Seleccionar
-        </div>
+        <select name="format" id="espesor" disabled="disabled">
+          <option selected disabled>Seleccionar</option>
+          <option value="Menos de 10 mm (3/8 pulg.)">Menos de 10 mm (3/8 pulg.)</option>
+          <option value="De 10 mm (3/8 pulg.) a 50 mm (2 pulg.)">De 10 mm (3/8 pulg.) a 50 mm (2 pulg.)</option>
+          <option value="De 50 mm (2 pulg.) a 75 mm (3 pulg.)">De 50 mm (2 pulg.) a 75 mm (3 pulg.)</option>
+          <option value="Más de 75 mm (3 pulg.)">Más de 75 mm (3 pulg.)</option>
+        </select>
       </div>
-    </div>
 
-    <div class="container-sim">
       <h2>CALIDAD Y PRODUCTIVIDAD</h2>
-
-
       <div class="select-box">
-        <div class="options-container">
-
-          <div class="option">
-            <input type="radio" class="radio"
-              id="Necesito un corte perfectamente recto y una precisión muy alta, aun si eso significa cortar extremadamente lento"
-              name="category">
-            <label
-              for="Necesito un corte perfectamente recto y una precisión muy alta, aun si eso significa cortar extremadamente lento">Necesito
-              un corte perfectamente recto y una precisión muy alta, aun si eso significa cortar extremadamente
-              lento</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio"
-              id="Valoro la productividad y la calidad. Estoy dispuesto a aceptar un ángulo de bisel de hasta 3º si puedo maximizar la velocidad de corte"
-              name="category">
-            <label
-              for="Valoro la productividad y la calidad. Estoy dispuesto a aceptar un ángulo de bisel de hasta 3º si puedo maximizar la velocidad de corte">Valoro
-              la productividad y la calidad. Estoy dispuesto a aceptar un ángulo de bisel de hasta 3º si puedo maximizar
-              la velocidad de corte</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio"
-              id="Tener un ángulo de bisel de ≥ 3° es perfectamente aceptable si puedo cortar muy rápidamente"
-              name="category">
-            <label
-              for="Tener un ángulo de bisel de ≥ 3° es perfectamente aceptable si puedo cortar muy rápidamente)">Tener
-              un ángulo de bisel de ≥ 3° es perfectamente aceptable si puedo cortar muy rápidamente</label>
-          </div>
-        </div>
-        <div class="selected">
-          Seleccionar
-        </div>
+        <select name="format" id="productividad" disabled="disabled">
+          <option selected disabled>Seleccionar</option>
+          <option
+            value="Necesito un corte perfectamente recto y una precisión muy alta, aun si eso significa cortar extremadamente lento">
+            Necesito un corte perfectamente recto y una precisión muy alta, aun si eso significa cortar extremadamente
+            lento</option>
+          <option
+            value="Valoro la productividad y la calidad. Estoy dispuesto a aceptar un ángulo de bisel de hasta 3º si puedo maximizar la velocidad de corte">
+            Valoro la productividad y la calidad. Estoy dispuesto a aceptar un ángulo de bisel de hasta 3º si puedo
+            maximizar la velocidad de corte</option>
+          <option value="Tener un ángulo de bisel de ≥ 3° es perfectamente aceptable si puedo cortar muy rápidamente">
+            Tener un ángulo de bisel de ≥ 3° es perfectamente aceptable si puedo cortar muy rápidamente</option>
+        </select>
       </div>
+      <div class="resultados">
+      <div class="resultado1"></div>
+      <div class="resultado2"></div>
+      <div class="resultado3"></div>
     </div>
 
+    </form>
+
+    <button id="boton">Me sirvió el simulador</button>
+    <div id="response">
+
+    </div>
 
 
     <footer class="footer">
@@ -263,13 +202,18 @@
       </div>
     </footer>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
 
+    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/jquery-3.6.0.js"></script>
+
     <script src="../js/script.js"></script>
+
 
 
 </body>

@@ -114,6 +114,7 @@ let $material = document.getElementById('material')
 let $calor = document.getElementById('calor')
 let $espesor = document.getElementById('espesor')
 let $productividad = document.getElementById('productividad')
+let $respuesta = document.getElementById('respuesta')
 
 let materiales = ['Metal', 'No metal']
 let calores = ['Zona de calor tolerada', 'Zona de calor no tolerada']
@@ -131,6 +132,19 @@ $material.addEventListener('change', (event) => {
 
 });
 
+
+$material.addEventListener('change', (event) => {
+if ($material.value == 'No Metal') {
+        const resultado = document.querySelector('respuesta');
+        resultado.textContent = `El corte con chorro de agua es un proceso basado en la erosión que usa presiones de agua extremadamente altas– 4137 bar o más – para cortar el material. Los sistemas de corte con chorro se agua se pueden usar con o sin abrasivos y se distinguen por el corte extremadamente preciso de una amplia variedad de metales, sin zona afectada por el calor.`;
+        let $respuesta = resultado.textContent.value
+    } else {
+        const resultado = document.querySelector('respuesta');
+        resultado.textContent = `Elegiste ${event.target.value}`;
+    }
+
+});
+
 $calor.addEventListener('change', (event) => {
     const resultado2 = document.querySelector('.resultado2');
     resultado2.textContent = `Elegiste ${event.target.value}`;
@@ -145,28 +159,28 @@ listForm.addEventListener('input', () => {
     if ($material.value == 'Metal') {
         $calor.removeAttribute('disabled');
     } else {
-        $calor.setAttribute('disabled', 'disabled');   
+        $calor.setAttribute('disabled', 'disabled');
     }
 
     if ($calor.value == 'Tolerada') {
         $espesor.removeAttribute('disabled');
     } else {
-        $espesor.setAttribute('disabled', 'disabled');   
+        $espesor.setAttribute('disabled', 'disabled');
     }
 
     if ($espesor.value == 'Menos de 10 mm (3/8 pulg.)') {
         $productividad.removeAttribute('disabled');
     } else {
-        $productividad.setAttribute('disabled', 'disabled');   
+        $productividad.setAttribute('disabled', 'disabled');
     }
 })
 
 function ajax() {
     const http = new XMLHttpRequest();
-    const url = "http://127.0.0.1:5500/pages/saludo.html";
+    const url = "http://127.0.0.1:5501/pages/saludo.html";
 
-    http.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
+    http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
             console.log(this.responseText);
             document.getElementById("response").innerHTML = this.responseText;
         }
@@ -176,28 +190,28 @@ function ajax() {
     http.send();
 }
 
-document.getElementById('boton').addEventListener("click", function(){
+document.getElementById('boton').addEventListener("click", function () {
     ajax();
 });
 
-function enviar (){
+function enviar() {
     var nombre = document.getElementById('fullname').value;
     var mail = document.getElementById('email').value;
     var telefono = document.getElementById('phone').value;
     var empresa = document.getElementById('empresa').value;
 
-    var dataen =  'nombre=' +nombre +'&mail='+mail; 
+    var dataen = 'nombre=' + nombre + '&mail=' + mail;
 
     $.ajax({
         type: 'post',
-        url: "http://127.0.0.1:5500/pages/saludo.html",
-        data: dataen, 
-        success: function(resp){
+        url: "http://127.0.0.1:5501/pages/saludo.html",
+        data: dataen,
+        success: function (resp) {
             $("#respa").html(resp);
-        
+
         }
     })
-    return false; 
+    return false;
 }
 
 
